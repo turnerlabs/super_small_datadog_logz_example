@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "version": "0.0.1",
+  "description":"Basic test that implements datadog statsd and logz",
+  "dependencies": {
+    "statsd-client": "latest",
+    "logzio-nodejs": "latest",
+    "node-env-conf": "latest"
+  }
+}

@@ -20,10 +20,10 @@ var logzLoggerClient = logzLogger.createLogger({
 });
 
 var loopThisManyTimes = 100;
-var ddKey = "testdd.incrtest";
+var ddKeyIncr = "testdd.incrtest";
 
 for (ctr = 0; ctr < loopThisManyTimes; ctr++) {
-  datadogStatsDClient.increment(ddKey);
+  datadogStatsDClient.increment(ddKeyIncr);
 
   var logzObj = {
     message: 'A logz test message',
@@ -33,3 +33,32 @@ for (ctr = 0; ctr < loopThisManyTimes; ctr++) {
 
   logzLoggerClient.log(logzObj);
 }
+
+function getRandomInt() {
+  return Math.floor(Math.random() * (10000 - 0 + 1)) + 0;
+}
+
+var ddKeyTiming = "testdd.timing";
+
+// to mimic the timing of 20 function calls
+datadogStatsDClient.timing(ddKeyTiming, 1);
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());
+datadogStatsDClient.timing(ddKeyTiming, getRandomInt());

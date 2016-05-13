@@ -10,8 +10,8 @@ Assuming you have docker installed locally on your mac or windows and you have a
 2. docker run --name ddtestrun -e API_KEY="your datadog api key" -e LOGZ_TOKEN="your logz api key" -d ddtest
 3. docker exec -it ddtestrun bash
 4. type `node test.js`
-5. Navigate to https://app.datadoghq.com/metric/explorer.  Type testdd in the Graph dropdown and select "testdd.incrtest".  You should see a graph with 100 items on it to the right.
-6. Navigate to https://app.logz.io/#/dashboard/kibana.  Type "A logz test message" in the search box at the top of the page and you should see a bunch of log messages
+5. Navigate to https://app.logz.io/#/dashboard/kibana.  Type "A logz test message" in the search box at the top of the page and you should see a bunch of log messages
+6. Navigate to https://app.datadoghq.com/metric/explorer.  Type testdd in the Graph dropdown and select "testdd.incrtest".  You should see a graph with 100 items on it to the right. Type testdd in the Graph dropdown and select "testdd.timing".  You should see a graph with 10 times on it to the right. 
 
 ### Cleanup
 
